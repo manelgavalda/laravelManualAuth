@@ -18,11 +18,12 @@ class HomeController extends Controller
         $row = $query->fetch();
         //dd($row);
 
+        $user=User::find(1);
         // 1) Aconseguir informació de la BD.
         // 2) Mostrar vista home passant info del usuari.
-        //$user = User::find(1);
-        $user->name="Manel";
-        $user->sn1="Gavaldà";
-        return view('home')->withUser($row); //resources/views/home.blade.php
+//        $user = User::find(1);
+//        $user->name="Manel";
+//        $user->sn1="Gavaldà";
+        return view('home')->withUser($user); //resources/views/home.blade.php
     }
 }
