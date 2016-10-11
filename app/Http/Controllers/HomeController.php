@@ -8,15 +8,24 @@ use App\Http\Requests;
 //use PDO;
 class HomeController extends Controller
 {
+    /*
     public function __construct()
     {
+        //Porta que ens diu on anar al fer la autenticació. Per evitar if/else.
         $this->middleware('auth');
+        */
     }
-    public function index()
+    public
+/**
+ * @return mixed
+ */
+function index()
     {
+        /*
+        //Controlador només fa la seva feina.
         $user=Auth::user();
         return view('home')->withUser($user);
-
+*/
 
 //        $user = new \stdClass();
 //
@@ -35,5 +44,13 @@ class HomeController extends Controller
 ////        $user->name="Manel";
 ////        $user->sn1="Gavaldà";
 //        return view('home')->withUser($user); //resources/views/home.blade.php
+    //Estat sessió
+    $user = $this->getUser();
+        return view('home')
+            ->withUser($user);
     }
+    private function getUser()
+{
+    //Opció 1: query strings $_GET
+    return $_GET['user'];
 }
