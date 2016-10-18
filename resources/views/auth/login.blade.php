@@ -21,7 +21,7 @@
         Password: <input type="password" name="password">
     </div>
     <div class="row">
-        <input type="submit" value="Login" class="btn btn-danger">
+        <input type="submit" value="Login" class="btn btn-danger" name="login">
     </div>
 </form>
 <div class="col-md-4"></div>
