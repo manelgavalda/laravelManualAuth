@@ -26,9 +26,6 @@ Route::get('/', function () {
 //    Guard::class, ParameterGuard::class
 //);
 
-$this->app->bind(
-    Guard::class, ParameterGuard::class
-);
 
 Route::group(['middleware' => 'manualauth'], function () {
     Route::get('/tasques', function () {
