@@ -16,8 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tasques', function () {
-    return view('tasques');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/tasques', function () {
+        return view('tasques');
+    });
 });
 
 //PAS 1: Middleware? Com protegir pàgines?
