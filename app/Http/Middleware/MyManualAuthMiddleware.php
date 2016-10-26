@@ -5,10 +5,6 @@ namespace App\Http\Middleware;
 use App\ManualAuth\Guard;
 use Closure;
 
-//use ManualGuard;
-
-//use ManualGuard;
-
 
 class MyManualAuthMiddleware
 {

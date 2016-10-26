@@ -7,10 +7,11 @@
  * Time: 20:08
  */
 
-namespace \App\ManualAuth;
+namespace App\ManualAuth;
 
 class CookieGuard implements Guard
 {
+    protected $provider;
 
     /**
      * ManualGuard constructor.
@@ -24,4 +25,16 @@ class CookieGuard implements Guard
         return isset($_COOKIE['user']) ? true : false ;
 
     }
+
+    public function validate(array $credentials)
+    {
+        return $this->provider->validate($credentials);
+        //return true;
+    }
+    public function setUser($user)
+    {
+        // TODO: Implement setUser() method.
+    }
+
+
 }

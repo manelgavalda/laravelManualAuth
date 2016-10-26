@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,9 +15,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        $this->app->bind(
-            Guard::class, ParameterGuard::class
-        );
+        $this->app->bind(\App\ManualAuth\Guard::class, \App\ManualAuth\CookieGuard::class);
+        //$this->app->bind(\App\ManualAuth\Guard::class, \App\ManualAuth\ParameterGuard::class);
+
     }
 
     /**
