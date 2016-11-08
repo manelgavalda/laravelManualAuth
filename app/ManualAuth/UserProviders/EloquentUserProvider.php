@@ -12,6 +12,7 @@ class EloquentUserProvider implements UserProvider
 
     public function validate(array $credentials)
     {
+        $user= $this->getUserByCredentials($credentials);
 
 
     //SALTS
