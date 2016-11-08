@@ -2,6 +2,8 @@
 
 namespace App\ManualAuth;
 
+//abstact interficie implementacions
+
 interface Guard
 {
     public function check();

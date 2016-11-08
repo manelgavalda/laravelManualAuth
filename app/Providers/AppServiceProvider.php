@@ -12,10 +12,12 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
+    //Tendriem que fer un manualaut service provider
     public function boot()
     {
-
-        $this->app->bind(\App\ManualAuth\Guard::class, \App\ManualAuth\CookieGuard::class);
+        //Configurable de forma que ens tocarà canviar el fitxer de configuració.
+        $this->app->bind(\App\ManualAuth\Guard::class, config('manualauth.guard'));
         //$this->app->bind(\App\ManualAuth\Guard::class, \App\ManualAuth\ParameterGuard::class);
 
     }
