@@ -4,13 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
 class RegisterController extends Controller
 {
-    public function register()
+    protected $userprovider;
+
+    public function showRegisterForm()
     {
-        //return view('auth.login');
-        echo "Register";
+        return view('auth.register');
+    }
+
+    public function register(Request $request)
+    {
+        $this->validateRegister($request);
+        $credentials = $request->only(['name','email','password']);
+        $this->userprovider->createUser($credentials);
+    }
+
+    private function validateRegister($request)
+    {
+        $this->validate($request,[
+            'nom'=> 'required', 'email' => 'email|required', 'password' => 'required|confirmed',
+        ]);
     }
 }

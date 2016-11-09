@@ -49,7 +49,7 @@ class LoginController extends Controller
             return redirect('home');
         }
         \Session::flash('errors',collect(['Login incorrecte']));
-        return redirect('login');
+        return redirect('home');
     }
 
     private function validateLogin($request)
