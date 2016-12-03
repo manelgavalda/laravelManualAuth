@@ -32,7 +32,10 @@ Route::group(['middleware' => 'manualauth'], function () {
         return view('tasques');
     });
     Route::get('/home', function () {
-        return "home";
+        return view('home');
+    });
+    Route::get('logout', function() {
+        return redirect('login')->withCookie(Cookie::forget('user'));
     });
 });
 
@@ -46,10 +49,6 @@ Route::post('/login', 'LoginController@login');
 
 Route::get('/register', 'RegisterController@showRegisterForm');
 Route::post('/register', 'RegisterController@register');
-
-Route::post('/logout', function() {
-    return redirect('/home')->withCookie(Cookie::forget('cookie_name'));
-});
 
 
 //PAS 1: Middleware? Com protegir pàgines?
