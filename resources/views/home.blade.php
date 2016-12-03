@@ -26,11 +26,24 @@
         </div>
     @endif
     <div class="row text-center">
-        <h3>Benvingut</h3>
+        <h3>Tasques</h3>
+        <form action="/tasques" method="GET">
+            <input type="submit" value="Tasques" class="btn btn-primary" name="tasques">
+        </form>
+
+        <h3>Logout</h3>
         <form action="/logout" method="GET">
             <input type="submit" value="Logout" class="btn btn-primary" name="logout">
         </form>
+
+        <h3>Welcome</h3>
+        <form action="/" method="GET">
+            <input type="submit" value="Welcome" class="btn btn-primary" name="welcome">
+        </form>
+
+
     </div>
+
 </body>
 </html>
 @endsection
