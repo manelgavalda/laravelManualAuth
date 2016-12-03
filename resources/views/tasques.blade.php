@@ -22,10 +22,7 @@ echo "Aqui van les tasques";
     </div>
 @endif
 <div class="row text-center">
-    <h3>Home</h3>
-    <form action="/home" method="GET">
-        <input type="submit" value="Home" class="btn btn-primary" name="home">
-    </form>
+    <a class="btn btn-primary" href="/home">Home</a>
 </div>
 </body>
 </html>

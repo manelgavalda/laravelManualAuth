@@ -26,22 +26,14 @@
         </div>
     @endif
     <div class="row text-center">
-        <h3>Tasques</h3>
-        <form action="/tasques" method="GET">
-            <input type="submit" value="Tasques" class="btn btn-primary" name="tasques">
-        </form>
+        <h3>Veure tasques</h3>
+        <a class="btn btn-primary" href="/tasques">Tasques</a>
 
-        <h3>Logout</h3>
-        <form action="/logout" method="GET">
-            <input type="submit" value="Logout" class="btn btn-primary" name="logout">
-        </form>
+        <h3>Sortir de la sessió</h3>
+        <a class="btn btn-primary" href="/logout">Logout</a>
 
-        <h3>Welcome</h3>
-        <form action="/" method="GET">
-            <input type="submit" value="Welcome" class="btn btn-primary" name="welcome">
-        </form>
-
-
+        <h3>Pàgina principal</h3>
+        <a class="btn btn-primary" href="/">Welcome</a>
     </div>
 
 </body>
