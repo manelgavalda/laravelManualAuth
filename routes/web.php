@@ -34,6 +34,7 @@ Route::group(['middleware' => 'manualauth'], function () {
     Route::get('/home', function () {
         return view('home');
     });
+    //redirect and destroy use cookie.
     Route::get('logout', function() {
         return redirect('login')->withCookie(Cookie::forget('user'));
     });
