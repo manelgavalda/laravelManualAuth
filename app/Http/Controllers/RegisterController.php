@@ -9,17 +9,17 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
     //Dependency Injection
-    protected $userprovider;
+    protected $userProvider;
     protected $guard;
 
     /**
      * RegisterController constructor.
-     * @param $userprovider
+     * @param $userProvider
      * @param $guard
      */
-    public function __construct(UserProvider $userprovider, Guard $guard)
+    public function __construct(UserProvider $userProvider, Guard $guard)
     {
-        $this->userprovider = $userprovider;
+        $this->userProvider = $userProvider;
         $this->guard = $guard;
     }
 
@@ -33,8 +33,9 @@ class RegisterController extends Controller
     {
         $this->validateRegister($request);
         $credentials = $request->only(['name','email','password']);
-        $user = $this->userprovider->setUser($credentials);
+        $user = $this->userProvider->setUser($credentials);
         $this->guard->setUser($user);
+        return redirect('home');
     }
 
     private function validateRegister($request)
