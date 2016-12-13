@@ -44,6 +44,7 @@ Use "php artisan migrate:refresh" to run migrations with --seed option if you wa
 $ php artisan migrate:refresh --seed
 ```
 
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
@@ -70,3 +71,6 @@ If you discover any security related issues, please email manelgavalda@iesebre.c
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[link-author]: https://github.com/manelgavalda
+[link-contributors]: ../../contributors
