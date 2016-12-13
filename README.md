@@ -1,28 +1,48 @@
 # laravelManualAuth
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
-
-
 Added Authentication Manually for a Laravel Project 
+
+## Requisites
+
+- PHP 5.6 or higher version.
+- Composer.
+- Npm.
 
 ## Install
 
-Via Composer
+- Clone via github:
 
 ``` bash
 $ git clone git@github.com:manelgavalda/laravelManualAuth.git
 ```
 
-## Usage
+- Run composer install and npm install (or yarn) to install dependencies:
 
-``` php
-$skeleton = new manelgavalda\laravelManualAuth();
-echo $skeleton->echoPhrase('Hello, League!');
+``` bash
+$ composer install
+
+$ npm install
+```
+
+- Copy .env.example to .env with your local configuration:
+
+``` bash
+$ cp .env.example .env
+```
+
+- Finally generate laravel project key:
+
+``` bash
+$ php artisan key:generate
+```
+
+## Database
+
+Use "php artisan migrate:refresh" to run migrations with --seed option if you want to fill the db.
+
+``` bash
+$ php artisan migrate:refresh --seed
+```
 ```
 
 ## Change log
@@ -51,18 +71,3 @@ If you discover any security related issues, please email manelgavalda@iesebre.c
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/manelgavalda/laravelManualAuth.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/manelgavalda/laravelManualAuth/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/manelgavalda/laravelManualAuth.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/manelgavalda/laravelManualAuth.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/manelgavalda/laravelManualAuth.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/manelgavalda/laravelManualAuth
-[link-travis]: https://travis-ci.org/manelgavalda/laravelManualAuth
-[link-scrutinizer]: https://scrutinizer-ci.com/g/manelgavalda/laravelManualAuth/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/manelgavalda/laravelManualAuth
-[link-downloads]: https://packagist.org/packages/manelgavalda/laravelManualAuth
-[link-author]: https://github.com/manelgavalda
-[link-contributors]: ../../contributors
