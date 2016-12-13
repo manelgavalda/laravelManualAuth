@@ -43,7 +43,6 @@ Use "php artisan migrate:refresh" to run migrations with --seed option if you wa
 ``` bash
 $ php artisan migrate:refresh --seed
 ```
-```
 
 ## Change log
 
