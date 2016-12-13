@@ -2,3 +2,7 @@ build
 composer.lock
 docs
 vendor
+node_modules
+_ide_helper.php
+.idea
+
